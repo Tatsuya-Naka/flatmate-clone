@@ -84,7 +84,14 @@ export default async function Header() {
                         >
                             <div className="flex ">
                                 {/* profile image */}
-                                <div className="border-[1px] border-solid border-sky-900 rounded-full w-[32px] h-[32px] bg-green-700" />
+                                {!session ?
+                                    <div className="w-full h-full flex items-center">
+                                        <FaUserAlt height={1245} width={1400} className="inline-block h-[12.45px] w-[14px]" />
+                                        <p className="ml-2 text-sm inline-block whitespace-nowrap">Sign in</p>
+                                    </div>
+                                    :
+                                    <div className="border-[1px] border-solid border-sky-900 rounded-full w-[32px] h-[32px] bg-green-700" />
+                                }
                             </div>
                         </Link>
                     </div>

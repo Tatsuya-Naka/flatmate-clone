@@ -1,9 +1,8 @@
 import Link from "next/link";
-
-import { LatestPost } from "~/app/_components/post";
 import { getServerAuthSession } from "~/server/auth";
 import { api, HydrateClient } from "~/trpc/server";
 import Header from "./_components/header";
+import PropertyCom from "./_components/property";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
@@ -58,7 +57,7 @@ export default async function Home() {
           </div>
 
           {/* for 1024px width */}
-          <div className="lg:flex lg:flex-row my-8 mx-auto max-w-[1200px] w-full hidden">
+          <div className="lg:flex lg:flex-row my-7 mx-auto max-w-[1200px] w-full hidden">
             {/* I need a flatmate */}
             <Link
               href="#"
@@ -114,8 +113,19 @@ export default async function Home() {
         </div>
 
         {/* Property */}
-        <div>
+        <div className="lg:pt-0 md:mx-auto md:max-w-[1200px] md:pb-16 md:pt-4">
+          {/* Property content */}
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-8 md:gap-6">
+            <PropertyCom />
+            <PropertyCom />
+            <PropertyCom />
+            <PropertyCom />
+          </div>
 
+          {/* Page Link */}
+          <nav className="">
+
+          </nav>
         </div>
 
         {/* Footer 1 */}

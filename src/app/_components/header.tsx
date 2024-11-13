@@ -10,8 +10,8 @@ export default async function Header() {
     const session = await getServerAuthSession();
 
     return (
-        <div className="relative z-[200] font-sans">
-            <div className="bg-white sticky top-0 right-0 left-0 flex items-center justify-center border-b-[1px] border-solid border-gray-200 flex items-center justify-center w-full md:pt-[22px] md:pb-[21px] md:px-4 px-4 pb-4">
+        <div className="sticky top-0 z-[200] font-sans">
+            <div className="bg-white top-0 right-0 left-0 flex items-center justify-center border-b-[1px] border-solid border-gray-200 flex items-center justify-center w-full md:pt-[22px] md:pb-[21px] md:px-4 px-4 pb-4">
                 <nav className="max-w-[1200px] md:grid lg:grid-cols-[minmax(134px,_3fr)_minmax(0px,_6fr)_4.5fr] md:grid-cols-[minmax(134px,_2fr)_minmax(0px,_4fr)_5fr] md:gap-4 flex items-center md:justify-center w-full flex-wrap gap-x-3">
                     {/* MenuButton */}
                     <button className="md:hidden flex justify-start items-center px-4 -mx-4 min-h-12 min-w-auto"

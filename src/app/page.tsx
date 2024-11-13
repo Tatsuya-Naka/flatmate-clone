@@ -13,57 +13,121 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <Header />
-      <main className="flex min-h-screen flex-col items-center justify-center  text-white">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-          <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-            Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-          </h1>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
+      <div className="relative z-0">
+        <Header />
+        {/* home I need a flatmate and I need a place */}
+        <div className="">
+          <div>
+
+          </div>
+
+          <div className="lg:hidden flex md:flex-row flex-col md:justify-center items-center bg-[#eaebec] pt-4 px-4 pb-6 relative">
+            {/* I need a flatmate */}
             <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-              href="https://create.t3.gg/en/usage/first-steps"
-              target="_blank"
+              href="#"
+              className="bg-[url(https://flatmates-res.cloudinary.com/image/upload/dpr_2.0,f_auto,q_auto/v1624496539/flatmates_design/mobile-homepage-bed.png)]
+                        md:mr-8 bg-[center_right_6px] bg-[length:140px] bg-white bg-no-repeat rounded-lg shadow-[0_3px_1px_rgba(0,0,0,0.04)]
+                        max-w-[400px] p-4 relative w-full md:m-0 mb-2"
             >
-              <h3 className="text-2xl font-bold">First Steps →</h3>
-              <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
+              <div className="relative z-2 ">
+                <p className="text-[#6d7580] text-sm font-[600] leading-base leading-6 m-auto ">
+                  Create free listing
+                </p>
+                <p className="text-[#2f3a4a] text-base font-[700] leading-6 m-auto ">
+                  I need a flatmate
+                </p>
               </div>
             </Link>
+
+            {/* I need a place */}
             <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-              href="https://create.t3.gg/en/introduction"
-              target="_blank"
+              href="#"
+              className="bg-[url(https://flatmates-res.cloudinary.com/image/upload/dpr_2.0,f_auto,q_auto/v1624496539/flatmates_design/mobile-homepage-woman.png)]
+                        bg-[right_16px_top_-6px] bg-[length:140px] bg-white bg-no-repeat rounded-lg shadow-[0_3px_1px_rgba(0,0,0,0.04)]
+                        max-w-[400px] p-4 relative w-full "
             >
-              <h3 className="text-2xl font-bold">Documentation →</h3>
-              <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
+              <div className="relative z-2 ">
+                <p className="text-[#6d7580] text-sm font-[600] leading-base leading-6 m-auto ">
+                  Create free listing
+                </p>
+                <p className="text-[#2f3a4a] text-base font-[700] m-auto leading-6 ">
+                  I need a place
+                </p>
               </div>
             </Link>
           </div>
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-white">
-              {hello ? hello.greeting : "Loading tRPC query..."}
-            </p>
 
-            <div className="flex flex-col items-center justify-center gap-4">
-              <p className="text-center text-2xl text-white">
-                {session && <span>Logged in as {session.user?.name}</span>}
-              </p>
-              <Link
-                href={session ? "/api/auth/signout" : "/api/auth/signin"}
-                className="rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20"
-              >
-                {session ? "Sign out" : "Sign in"}
-              </Link>
-            </div>
+          {/* for 1024px width */}
+          <div className="lg:flex lg:flex-row my-8 mx-auto max-w-[1200px] w-full hidden">
+            {/* I need a flatmate */}
+            <Link
+              href="#"
+              className="lg:mr-8 bg-[url(https://flatmates-res.cloudinary.com/image/upload/dpr_2.0,f_auto,q_auto/v1624431481/flatmates_design/homepage-desktop-bed)]
+                        bg-right bg-no-repeat bg-contain relative w-full min-h-[220px] hover:outline hover:outline-2 hover:outline-[#2f3a4a] hover:outline-solid rounded-xl group"
+            >
+              <div className="border-3  shadow-[0_3px_8px_rgba(0,0,0,0.12)] m-0.5 px-8 py-6 h-full rounded-xl">
+                <div className="flex flex-col items-start height-[168px] justify-center relative z-2 h-full gap-2">
+                  {/* Title */}
+                  <h3 className="text-[#2f3a4a] text-2xl font-[700] leading-[1.875rem] mb-[0.5rem] max-w-[230px] ">
+                    Create a free property listing
+                  </h3>
+                  <p className="text-[#2f3a4a] text-2xl font-[700] leading-[1.875rem] mb-[0.5rem] max-w-[230px] ">
+
+                  </p>
+                  <div
+                    className="group-hover:opacity-80 bg-[#2f3a4a] rounded-lg inline-block font-base font-[600] min-w-[200px] px-4 py-3 text-center w-auto"
+                  >
+                    <p className="text-white m-0 ">
+                      I need a flatmate
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* I need a place */}
+            <Link
+              href="#"
+              className=" bg-[url(https://flatmates-res.cloudinary.com/image/upload/dpr_2.0,f_auto,q_auto/v1624430583/flatmates_design/homepage-desktop-woman)]
+                        bg-right bg-no-repeat bg-contain relative w-full min-h-[220px] hover:outline hover:outline-2 hover:outline-[#2f3a4a] hover:outline-solid rounded-xl group"
+            >
+              <div className="border-3  shadow-[0_3px_8px_rgba(0,0,0,0.12)] m-0.5 px-8 py-6 h-full rounded-xl">
+                <div className="flex flex-col items-start height-[168px] justify-center relative z-2 h-full gap-2">
+                  {/* Title */}
+                  <h3 className="text-[#2f3a4a] text-2xl font-[700] leading-[1.875rem] mb-[0.5rem] max-w-[230px] ">
+                    Create a free seeker listing
+                  </h3>
+                  <p className="text-[#2f3a4a] text-2xl font-[700] leading-[1.875rem] mb-[0.5rem] max-w-[230px] ">
+
+                  </p>
+                  <div
+                    className="group-hover:opacity-80 bg-[#2f3a4a] rounded-lg inline-block font-base font-[600] min-w-[200px] px-4 py-3 text-center w-auto"
+                  >
+                    <p className="text-white m-0 ">
+                      I need a place
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
           </div>
-
-          {session?.user && <LatestPost />}
         </div>
-      </main>
+
+        {/* Property */}
+        <div>
+
+        </div>
+
+        {/* Footer 1 */}
+        <footer>
+
+        </footer>
+
+        {/* footer 2 */}
+        <footer>
+
+        </footer>
+      </div>
     </HydrateClient>
   );
 }

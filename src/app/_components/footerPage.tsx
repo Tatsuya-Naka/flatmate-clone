@@ -359,7 +359,7 @@ export default function FooterPage() {
         <div className="lg:pb-16 lg:pt-6 md:px-6 md:py-7 mx-auto max-w-[1200px] px-4 py-5">
             <div className="flex justify-between items-center">
                 <h3 className="text-white lg:text-xl text-sm lg:opacity-100 opacity-80 m-0 ">
-                    Australia's biggest share accommodation website
+                    Australia&apos;s biggest share accommodation website
                 </h3>
                 <div className="lg:hidden inline-block"
                     onClick={() => setToggle(prev => !prev)}
